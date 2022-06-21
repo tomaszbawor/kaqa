@@ -1,16 +1,24 @@
-<script lang="ts" setup>
-import TheSidebar1 from "~~/components/TheSidebar.vue";
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div class="content">
-    <TheSidebar />
-    <slot />
+  <div class="wrapper">
+    <div class="side"><TheSidebar /></div>
+    <div class="content">
+      <slot />
+    </div>
   </div>
 </template>
 
 <style scoped>
+.wrapper {
+  display: flex;
+}
+
+.side {
+  max-width: 400px;
+}
+
 .content {
-  background-color: red;
+  padding: 10px;
 }
 </style>
